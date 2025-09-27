@@ -1,7 +1,8 @@
 # FASTAPI backend
 
 Simple **FastApi** backend application for a technical test.
-For the FrontEnd code repository, go to:
+
+For the FrontEnd code repository, go to: https://github.com/Navitat/wipass-tech-test-frontend
 
 ## 📦Installation
 
