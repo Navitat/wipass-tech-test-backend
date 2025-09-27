@@ -3,7 +3,7 @@
 Simple **FastApi** backend application for a technical test.
 For the FrontEnd code repository, go to:
 
-## Installation
+## 📦Installation
 
 1. Clone the repository:
 
@@ -38,7 +38,7 @@ source .venv/Scripts/activate
 pip install -r requirements.txt
 ```
 
-## Running the App
+## ▶️Running the App
 
 Start the app using **fastapi**
 
@@ -48,6 +48,6 @@ fastapi dev main.py
 
 Default runs on http://127.0.0.1:8000
 
-## API Documentation
+## 📖API Documentation
 
 - Swagger UI: http://127.0.0.1:8000/docs
