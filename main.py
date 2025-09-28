@@ -1,6 +1,19 @@
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 
-api = FastAPI()
+app = FastAPI()
+
+origins = [
+  "http://localhost:3000"
+]
+
+app.add_middleware(
+  CORSMiddleware,
+  allow_origins=origins,
+  allow_credentials=True,
+  allow_methods=["*"],
+  allow_headers=["*"],
+)
 
 all_tickets = [
   {
@@ -11,21 +24,21 @@ all_tickets = [
   }
 ]
 
-@api.get("/")
+@app.get("/")
 def index():
   return {"message": "Hello, World!"}
 
-@api.get("/health")
+@app.get("/health")
 def health_check():
   return {"ok": True}
 
 
-@api.get("/tickets")
+@app.get("/tickets")
 def get_tickets():
   return all_tickets
 
 
-@api.post("/tickets")
+@app.post("/tickets")
 def create_ticket(ticket: dict):
   new_ticket = {
     "client": ticket["client"],
